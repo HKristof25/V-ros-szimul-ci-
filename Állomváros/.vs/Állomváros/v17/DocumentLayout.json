@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HKris\\Documents\\\u00E9retts\u00E9gi projekt\\\u00C1llomv\u00E1ros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\users\\hkris\\documents\\\u00E9retts\u00E9gi projekt\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\users\\hkris\\documents\\\u00E9retts\u00E9gi projekt\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\HKris\\Documents\\\u00E9retts\u00E9gi projekt\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\HKris\\Documents\\\u00E9retts\u00E9gi projekt\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
+              "RelativeToolTip": "\u00C1llomv\u00E1ros\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T06:48:31.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\HKris\\Documents\\\u00E9retts\u00E9gi projekt\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\HKris\\Documents\\\u00E9retts\u00E9gi projekt\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+              "RelativeToolTip": "\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T06:48:27.395Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
