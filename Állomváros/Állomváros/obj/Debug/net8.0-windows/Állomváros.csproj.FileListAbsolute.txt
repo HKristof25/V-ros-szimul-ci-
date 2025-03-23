@@ -19,3 +19,26 @@ C:\Users\HKris\Documents\érettségi projekt\Állomváros\Állomváros\obj\Debug
 C:\Users\HKris\Documents\érettségi projekt\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.pdb
 C:\Users\HKris\Documents\érettségi projekt\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.genruntimeconfig.cache
 C:\Users\HKris\Documents\érettségi projekt\Állomváros\Állomváros\obj\Debug\net8.0-windows\ref\Állomváros.dll
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\bin\Debug\net8.0-windows\Állomváros.exe
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\bin\Debug\net8.0-windows\Állomváros.deps.json
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\bin\Debug\net8.0-windows\Állomváros.runtimeconfig.json
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\bin\Debug\net8.0-windows\Állomváros.dll
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\bin\Debug\net8.0-windows\Állomváros.pdb
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\App.g.cs
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros_MarkupCompile.cache
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros_MarkupCompile.lref
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\MainWindow.baml
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.g.resources
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.GeneratedMSBuildEditorConfig.editorconfig
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.AssemblyInfoInputs.cache
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.AssemblyInfo.cs
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.csproj.CoreCompileInputs.cache
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.sourcelink.json
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.dll
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\refint\Állomváros.dll
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.pdb
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Állomváros.genruntimeconfig.cache
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\ref\Állomváros.dll
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Reszlet.g.cs
+C:\David\Code\V-ros-szimul-ci-\Állomváros\Állomváros\obj\Debug\net8.0-windows\Reszlet.baml

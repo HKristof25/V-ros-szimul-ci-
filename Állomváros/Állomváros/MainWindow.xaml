@@ -106,9 +106,11 @@
                 <Button
             Content="Új szolgáltatás"
             Foreground="White"
-             FontSize="28"
-             FontWeight="Medium"
-             Margin="20">
+            FontSize="28"
+            Tag="szolgaltatas"
+            FontWeight="Medium"
+            Margin="10"
+            Click="OpenWindow_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -136,11 +138,13 @@
                 </Button>
 
                 <Button
-Content="Karbantartás"
-Foreground="White"
- FontSize="28"
- FontWeight="Medium"
- Margin="20">
+    Content="Szolgáltatás törlése"
+    Foreground="White"
+    FontSize="28"
+    Tag="torles"
+    FontWeight="Medium"
+    Margin="10"
+    Click="OpenWindow_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -168,11 +172,13 @@ Foreground="White"
                 </Button>
 
                 <Button
-Content="Új Épület"
-Foreground="White"
- FontSize="28"
- FontWeight="Medium"
- Margin="20">
+    Content="Karbantartás"
+    Foreground="White"
+    FontSize="28"
+    Tag="karbantartas"
+    FontWeight="Medium"
+    Margin="10"
+    Click="OpenWindow_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -200,11 +206,46 @@ Foreground="White"
                 </Button>
 
                 <Button
-Content="Start"
-Foreground="White"
- FontSize="28"
- FontWeight="Medium"
- Margin="20">
+    Content="Új Épület"
+    Foreground="White"
+    FontSize="28"
+    FontWeight="Medium"
+    Margin="10"
+    Tag="epulet"
+    Click="OpenWindow_Click">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"></Setter>
+                            <Setter Property="Background" Value="#FE6584"></Setter>
+                            <Setter Property="Cursor" Value="Hand"></Setter>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF4C70"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="280" Height="35"
+    CornerRadius="12"
+    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button
+    Content="Start"
+    Foreground="White"
+    FontSize="28"
+    FontWeight="Medium"
+    Margin="10"
+    Click="OpenWindow_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -234,7 +275,7 @@ Foreground="White"
             </StackPanel>
 
             <TextBlock
-          Text="Pénz: 100 000 000"
+          Text="Lakosság: 100 000"
           FontSize="40"
           Foreground="White"
           VerticalAlignment="Center"

@@ -25,5 +25,15 @@ namespace Állomváros
         {
             if (e.LeftButton == MouseButtonState.Pressed) { DragMove(); }
         }
+
+        private void OpenWindow_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                string actionType = button.Tag.ToString();
+                Reszlet window = new Reszlet(actionType);
+                window.Show();
+            }
+        }
     }
 }
