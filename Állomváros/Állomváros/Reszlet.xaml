@@ -10,10 +10,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="25"></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="139*"></ColumnDefinition>
-            <ColumnDefinition Width="41*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Background="#0f0f2d" Grid.ColumnSpan="2"
               MouseDown="Grid_MouseDown">
@@ -28,13 +27,90 @@
                 FontWeight="Medium"
             ></TextBlock>
         </Grid>
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <Button Content="Ok" Margin="20, 430,20,0" Click="Button_Click"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
+        
+      
+        
+        <StackPanel  Grid.Row="1">
+            
             <TextBlock x:Name="TitleText" FontSize="18" FontWeight="Bold" Margin="10"/>
-            <StackPanel x:Name="ContentPanel" Margin="10"/>
-            <Button Content="Confirm" Margin="10"/>
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="ContentPanel" Margin="10"></StackPanel>
+
+            <Button
+                Content="Confirm"
+                Foreground="White"
+                FontSize="28"
+                Tag="szolgaltatas"
+                FontWeight="Medium"
+                Margin="5"
+                Click="Button_Click"
+                Grid.Row="2">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"></Setter>
+                        <Setter Property="Background" Value="#FE6584"></Setter>
+                        <Setter Property="Cursor" Value="Hand"></Setter>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF4C70"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="280" Height="35"
+    CornerRadius="12"
+    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2">
+
+            <Button
+                Content="OK"
+                Foreground="White"
+                FontSize="28"
+                Tag="szolgaltatas"
+                FontWeight="Medium"
+                Margin="5"
+                Click="Button_Click"
+                Grid.Row="2">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"></Setter>
+                        <Setter Property="Background" Value="#FE6584"></Setter>
+                        <Setter Property="Cursor" Value="Hand"></Setter>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF4C70"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="280" Height="35"
+    CornerRadius="12"
+    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
         </StackPanel>
     </Grid>
 

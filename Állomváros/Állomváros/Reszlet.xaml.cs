@@ -37,33 +37,33 @@ namespace Állomváros
 
             if(actionType == "torles")
             {
-                ContentPanel.Children.Add(new TextBlock { Text = "Típus", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBox { Name = "Típus" });
-                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás az elégedettségen", Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Típus", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBox { Name = "Típus", FontSize = 28 });
+                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás az elégedettségen", FontSize = 28, Foreground = Brushes.White });
                 
             }
 
             if (actionType == "epulet")
             {
-                ContentPanel.Children.Add(new TextBlock { Foreground = Brushes.White, Text = "Méret"});
+                ContentPanel.Children.Add(new TextBlock { Foreground = Brushes.White, FontSize = 28, Text = "Méret"});
                 ContentPanel.Children.Add(new TextBox { Name = "meret" });
-                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás a lakosságon", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBlock { Text = "Ár", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBlock { Text = "Idő", Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás a lakosságon", FontSize = 28,Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Ár", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Idő", FontSize = 28, Foreground = Brushes.White });
             }
             if (actionType == "szolgaltatas")
             {
-                ContentPanel.Children.Add(new TextBlock { Text = "Típus", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBox { Name = "Típus" });
-                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás az elégedettségen", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBlock { Text = "Ár", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBlock { Text = "Idő", Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Típus", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBox { Name = "Típus", FontSize = 28 });
+                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás az elégedettségen", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Ár", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Idő", FontSize = 28, Foreground = Brushes.White });
             }
             if(actionType =="karbantartas")
             {
-                ContentPanel.Children.Add(new TextBlock { Text = "Ár", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás az elégedettségen", Foreground = Brushes.White });
-                ContentPanel.Children.Add(new TextBlock { Text = "Idő", Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Ár", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Befolyás az elégedettségen", FontSize = 28, Foreground = Brushes.White });
+                ContentPanel.Children.Add(new TextBlock { Text = "Idő", FontSize = 28, Foreground = Brushes.White });
             }
         }
     }
