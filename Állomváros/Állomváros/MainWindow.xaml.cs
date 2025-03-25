@@ -16,9 +16,24 @@ namespace Állomváros
     /// </summary>
     public partial class MainWindow : Window
     {
+        int PenzOsszeg;
+        int Elegedettseg;
+        int EpuletMinoseg;
+        int HaviKiadas;
+        int Honap;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            PenzOsszeg = 10000000;
+            Elegedettseg = 80;
+            EpuletMinoseg = 100;
+            HaviKiadas = 100000;
+            Honap = 1;
+
+            UpdateText();
+   
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -34,6 +49,26 @@ namespace Állomváros
                 Reszlet window = new Reszlet(actionType);
                 window.Show();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Honap += 1;
+            if (Elegedettseg - 10 < 0)
+                MessageBox.Show("Vesztettél");
+            else
+                Elegedettseg -= 10;
+            PenzOsszeg -= HaviKiadas;
+
+            UpdateText() ;
+        }
+        private void UpdateText()
+        {
+            Penz.Text = $"{PenzOsszeg} Ft";
+            elegedettseg.Text = $"Elégedettség: {Elegedettseg} %";
+            minoseg.Text = $"Épület minőség: {EpuletMinoseg} %";
+            honap.Text = $"{Honap}. Hónap";
+            kiadástext.Text = $"Havi kiadás: {HaviKiadas} Ft";
         }
     }
 }

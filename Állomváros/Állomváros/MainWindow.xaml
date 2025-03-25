@@ -43,6 +43,7 @@
                     HorizontalAlignment="Left"
                     FontFamily="Fonts/#Dosis"
                     FontWeight="Medium"
+                    x:Name="honap"
             ></TextBlock>
 
                 <TextBlock
@@ -54,6 +55,7 @@
                     HorizontalAlignment="Right"
                     FontFamily="Fonts/#Dosis"
                     FontWeight="Medium"
+                    x:Name="elegedettseg"
             ></TextBlock>
 
             </StackPanel>
@@ -84,7 +86,21 @@
               HorizontalAlignment="Center"
               FontFamily="Fonts/#Dosis"
               FontWeight="Medium"
-                    Margin="10"
+                    Margin="1"
+              x:Name="minoseg"
+      ></TextBlock>
+
+
+                <TextBlock
+              Text="Havi kiadás : 100 000 Ft"
+              FontSize="32"
+              Foreground="White"
+              VerticalAlignment="Center"
+              HorizontalAlignment="Center"
+              FontFamily="Fonts/#Dosis"
+              FontWeight="Medium"
+                    Margin="1"
+              x:Name="kiadástext"
       ></TextBlock>
 
 
@@ -100,6 +116,7 @@
               HorizontalAlignment="Center"
               FontFamily="Fonts/#Dosis"
               FontWeight="Medium"
+              x:Name="Penz"
       ></TextBlock>
 
             <StackPanel Margin="20">
@@ -240,12 +257,12 @@
                 </Button>
 
                 <Button
-    Content="Start"
+    Content="Következő hónap"
     Foreground="White"
     FontSize="28"
     FontWeight="Medium"
-    Margin="10"
-    Click="OpenWindow_Click">
+    Margin="10" Click="Button_Click"
+    >
 
                     <Button.Style>
                         <Style TargetType="Button">
