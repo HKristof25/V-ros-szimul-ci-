@@ -6,6 +6,27 @@
         xmlns:local="clr-namespace:Állomváros"
         mc:Ignorable="d"
         Title="MainWindow"  Background="#181735" Height="500" Width="900" WindowStyle="None" ResizeMode="NoResize">
+
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FE6584"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -31,12 +52,12 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0">
             <TextBlock x:Name="TitleTextLeft" FontSize="18" FontWeight="Bold" Margin="10"/>
-            <StackPanel x:Name="ContentPanel" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+            <StackPanel x:Name="ContentPanel" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBlock x:Name="TitleTextRight" FontSize="18" FontWeight="Bold" Margin="10"/>
-            <StackPanel x:Name="ContentPanel2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10"/>
+            <StackPanel x:Name="ContentPanel2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center">
