@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "NIxCJEaivUQ=",
   "success": true,
   "projectFilePath": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
+=======
+  "dgSpecHash": "mtbfJ1ykkQk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HKris\\Documents\\Város\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
+>>>>>>> 7740b51e98e3234b63cd2b14cc0ca9899f1adb56
   "expectedPackageFiles": [],
   "logs": []
 }

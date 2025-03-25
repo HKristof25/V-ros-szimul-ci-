@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\",
   "Documents": [
     {
@@ -21,6 +22,21 @@
     {
       "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\david\\code\\ikt\\v-ros-szimul-ci-\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\reszlet.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\reszlet.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\users\\hkris\\documents\\v\u00E1ros\\v-ros-szimul-ci-\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\users\\hkris\\documents\\v\u00E1ros\\v-ros-szimul-ci-\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\users\\hkris\\documents\\v\u00E1ros\\v-ros-szimul-ci-\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\reszlet.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\reszlet.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 7740b51e98e3234b63cd2b14cc0ca9899f1adb56
     }
   ],
   "DocumentGroupContainers": [
@@ -30,6 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -53,7 +70,20 @@
               "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
               "ToolTip": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
               "RelativeToolTip": "\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEwAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAEwAAABJAAAAAAAAAA==",
+=======
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reszlet.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
+              "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
+              "ToolTip": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
+              "RelativeToolTip": "\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAACMAAAAAAAAAA==",
+>>>>>>> 7740b51e98e3234b63cd2b14cc0ca9899f1adb56
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T13:03:18.864Z",
               "EditorCaption": ""
@@ -62,9 +92,15 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
+<<<<<<< HEAD
               "DocumentMoniker": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
               "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml",
               "ToolTip": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
+=======
+              "DocumentMoniker": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
+>>>>>>> 7740b51e98e3234b63cd2b14cc0ca9899f1adb56
               "RelativeToolTip": "\u00C1llomv\u00E1ros\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-18T06:48:31.219Z",
@@ -72,13 +108,21 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
               "ToolTip": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+=======
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\HKris\\Documents\\V\u00E1ros\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
+>>>>>>> 7740b51e98e3234b63cd2b14cc0ca9899f1adb56
               "RelativeToolTip": "\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAgwBwAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T06:48:27.395Z",
               "EditorCaption": ""

@@ -85,7 +85,7 @@ namespace Állomváros {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Állomváros;component/reszlet.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Állomváros;V1.0.0.0;component/reszlet.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Reszlet.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
