@@ -16,7 +16,7 @@ namespace Állomváros
     /// </summary>
     public partial class MainWindow : Window
     {
-        int PenzOsszeg;
+        public int PenzOsszeg;
         int Elegedettseg;
         int EpuletMinoseg;
         int HaviKiadas;
@@ -46,7 +46,7 @@ namespace Állomváros
             if (sender is Button button)
             {
                 string actionType = button.Tag.ToString();
-                Reszlet window = new Reszlet(actionType);
+                Reszlet window = new Reszlet(actionType, this);
                 window.Show();
             }
         }
@@ -69,6 +69,12 @@ namespace Állomváros
             minoseg.Text = $"Épület minőség: {EpuletMinoseg} %";
             honap.Text = $"{Honap}. Hónap";
             kiadástext.Text = $"Havi kiadás: {HaviKiadas} Ft";
+        }
+
+        public void penzUpdate(int ertek)
+        {
+            PenzOsszeg = ertek; 
+            UpdateText();
         }
     }
 }

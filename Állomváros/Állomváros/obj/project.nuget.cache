@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NIxCJEaivUQ=",
+  "dgSpecHash": "0j9o7jGS9b0=",
   "success": true,
-  "projectFilePath": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
+  "projectFilePath": "C:\\David\\Code\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
