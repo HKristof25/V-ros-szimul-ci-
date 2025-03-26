@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.ServiceProcess;
@@ -18,9 +19,11 @@ namespace Állomváros
 {
     public partial class Reszlet : Window
     {
+        List<string> list;
         public Reszlet(string actionType)
         {
             InitializeComponent();
+            list = ["Egészségügy", "Oktatás", "Gazdaság", "Pénzügy", "Szórakoztatás", "Kereskedelem"];
             SetContent(actionType);
         }
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -39,24 +42,76 @@ namespace Állomváros
 
             if (actionType == "torles")
             {
-                ContentPanel.Children.Add(new Label { Content = "Azonosító", Foreground = Brushes.White, FontSize = 20 });
-                ContentPanel.Children.Add(new TextBox { Text = "Azonosító", FontSize = 20, Foreground = Brushes.White });
-                ContentPanel.Children.Add(new Label { Content = "Név", Foreground = Brushes.White, FontSize = 20 });
-                ContentPanel.Children.Add(new TextBox { Text = "Név",  Foreground = Brushes.White, FontSize = 20});
-                ContentPanel.Children.Add(new Label { Content = "Típus", Foreground = Brushes.White, FontSize = 20 });
-                TextBox tipus = new TextBox { Name = "tipus", Text = "Típus", FontSize = 20, Foreground = Brushes.White };
-                ContentPanel.Children.Add(tipus);
-                ContentPanel2.Children.Add(new Label { Content = "Kezdő dátum", Foreground = Brushes.White, FontSize = 20 });
-                ContentPanel2.Children.Add(new TextBox { Text = "Kezdő dátum", FontSize = 20, Foreground = Brushes.White });
-                ContentPanel2.Children.Add(new Label { Content = "Befejező dátum", Foreground = Brushes.White, FontSize = 20 });
-                ContentPanel2.Children.Add(new TextBox { Text = "Befejező dátum", FontSize = 20, Foreground = Brushes.White });
-                ContentPanel2.Children.Add(new Label { Content = "Költség", Foreground = Brushes.White, FontSize = 20 });
-                ContentPanel2.Children.Add(new TextBox { Text = "Költség", FontSize = 20, Foreground = Brushes.White });
-                ContentPanel2.Children.Add(new Label { Content = "Befolyás az elégedettségen", FontSize = 20, Foreground = Brushes.White });
-                if (tipus.Text.ToLower() == "lakóház")
+                ListBox items = new ListBox { ItemsSource = list, Foreground = Brushes.Black, FontSize = 15, Background = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FE6584")) };
+                ContentPanel.Children.Add(items);
+                Label leiras = new Label { FontSize = 15, Foreground = Brushes.White };
+                items.SelectionChanged += (o, e) =>
                 {
-                    ContentPanel2.Children.Add(new Label { Content = "Befolyás a népességen", Foreground = Brushes.White, FontSize = 20});
-                }
+                    if(items.SelectedItem.ToString() != null)
+                    {
+                        switch (items.SelectedItem.ToString())
+                        {
+                            case "Egészségügy":
+                                ContentPanel2.Children.Clear();
+                                leiras.Content = "Havi bevétel: -100 000FT\nBefolyás az elégedettségen: -25%\nKöltségvetés: +700 000FT";
+                                ContentPanel2.Children.Add(leiras);
+                                break;
+                            case "Oktatás":
+                                ContentPanel2.Children.Clear();
+                                leiras.Content = "Havi bevétel: -0FT\nBefolyás az elégedettségen: -20%\nKöltségvetés: +400 000FT";
+                                ContentPanel2.Children.Add(leiras);
+                                break;
+                            case "Gazdaság":
+                                ContentPanel2.Children.Clear();
+                                leiras.Content = "Havi bevétel: -500 000FT\nBefolyás az elégedettségen: -22%\nKöltségvetés: +600 000FT";
+                                ContentPanel2.Children.Add(leiras);
+                                break;
+                            case "Pénzügy":
+                                ContentPanel2.Children.Clear();
+                                leiras.Content = "Havi bevétel: -300 000FT\nBefolyás az elégedettségen: -15%\nKöltségvetés: +300 000FT";
+                                ContentPanel2.Children.Add(leiras);
+                                break;
+                            case "Szórakoztatás":
+                                ContentPanel2.Children.Clear();
+                                leiras.Content = "Havi bevétel: 600 000FT\nBefolyás az elégedettségen: -25%\nKöltségvetés: +500 000FT";
+                                ContentPanel2.Children.Add(leiras);
+                                break;
+                            case "Kereskedelem":
+                                ContentPanel2.Children.Clear();
+                                leiras.Content = "Havi költség: -300 000FT\nBefolyás az elégedettségen: -16%\nKöltségvetés: +300 000FT";
+                                ContentPanel2.Children.Add(leiras);
+                                break;
+
+                        }
+                    }
+                };
+
+                ContentPanel.Children.Add(new Button { Content = "Épület", Margin = new Thickness(0, 10, 0, 0), Style = (Style) FindResource("RoundedButtonStyle")});
+                TextBox size = new TextBox { Margin = new Thickness(0, 10, 0, 0) , HorizontalAlignment = HorizontalAlignment.Center, Foreground = Brushes.Black, FontSize = 15, Width = 250 };
+                ContentPanel.Children.Add(size);
+                Label meret = new Label{ Foreground = Brushes.White, FontSize = 15 };
+                meret.Content = "Havi költésgvetés: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -0 fő";
+                ContentPanel.Children.Add(meret);
+                size.TextChanged += (s, e) =>
+                {
+                    if (double.TryParse(size.Text, out double sizeValue))
+                    {
+                        if (sizeValue > 0)
+                        {
+                            int lak = Convert.ToInt32(Math.Round(sizeValue / 30.0, 0));
+                            meret.Content = $"\"Havi költésgvetés: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -{lak} fő";
+                        }
+                        else
+                        {
+                            meret.Content = "Helytelen adat!";
+                        }
+                    }
+                    else
+                    {
+                        meret.Content = "Helytelen adat!";
+                    }
+                };
+
             }
 
 
