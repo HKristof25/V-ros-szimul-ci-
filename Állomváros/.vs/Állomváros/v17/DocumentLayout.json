@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\reszlet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\david\\code\\ikt\\v-ros-szimul-ci-\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\reszlet.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\reszlet.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|c:\\david\\code\\ikt\\v-ros-szimul-ci-\\\u00E1llomv\u00E1ros\\\u00E1llomv\u00E1ros\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E5EE614-EBF2-4A02-9C87-6058ABA8E6F0}|\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros.csproj|solutionrelative:\u00E1llomv\u00E1ros\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -53,14 +49,14 @@
               "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
               "ToolTip": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
               "RelativeToolTip": "\u00C1llomv\u00E1ros\\Reszlet.xaml.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFgAAABuAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAmwDYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T13:03:18.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml",
               "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml",
@@ -71,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\MainWindow.xaml.cs",
@@ -80,40 +76,6 @@
               "ViewState": "AgIAAAIAAAAAAAAAAAAgwBwAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T06:48:27.395Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "3e2499af-4c1a-4f0b-b8c4-bf300e799609",
-        "Display": 0,
-        "X": -454,
-        "Y": 130,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Reszlet.xaml",
-              "DocumentMoniker": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\Reszlet.xaml",
-              "RelativeDocumentMoniker": "\u00C1llomv\u00E1ros\\Reszlet.xaml",
-              "ToolTip": "C:\\David\\Code\\IKT\\V-ros-szimul-ci-\\\u00C1llomv\u00E1ros\\\u00C1llomv\u00E1ros\\Reszlet.xaml",
-              "RelativeToolTip": "\u00C1llomv\u00E1ros\\Reszlet.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAABlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-25T08:42:52.753Z",
-              "EditorCaption": ""
             }
           ]
         }
