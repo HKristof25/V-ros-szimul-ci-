@@ -20,10 +20,11 @@ namespace Állomváros
         private ListBox listbox1;
         private ListBox listbox2;
         private Label leiras1, leiras2;
-        private MainWindow mainWindow; 
+        private MainWindow mainWindow;
+        
 
-        private CheckBox cbEpületTorles, cbEpület, cbLakóépület, cbEgészségügy, cbOktatás, cbGazdaság, 
-                        cbPénzügy, cbSzórakoztatás, cbKereskedelem, cbEpületKarb;
+        private CheckBox cbEpületTorles, cbEpület, cbLakóépület, cbEgészségügy, cbOktatás, cbGazdaság, cbPénzügy, cbSzórakoztatás, cbKereskedelem, cbEpületKarb;
+        private TextBox sizeEp, sizeTo;
 
         public Reszlet(string actionType, MainWindow mw)
         {
@@ -42,76 +43,170 @@ namespace Állomváros
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int penz = mainWindow.PenzOsszeg; 
+            int elegedettseg = mainWindow.Elegedettseg;
+            int lakossag = mainWindow.Lakossag;
+            int haviBevetel = mainWindow.haviBevetel;
             
             if (cbEpületTorles?.IsChecked == true)
             {
-                penz += 100000; 
+                penz += 100000;
+                elegedettseg -= 20;
+                lakossag -= Convert.ToInt32(Math.Round(Convert.ToDouble(sizeTo.Text) / 30.0, 0));
+                
+                
             }
             if (cbEpület?.IsChecked == true)
             {
-                penz -= 10000000; 
+                penz -= 10000000;
+                elegedettseg += 15;
+                haviBevetel += 200000;
             }
             if (cbLakóépület?.IsChecked == true)
             {
-                penz -= 8000000; 
+                penz -= 8000000;
+                elegedettseg += 20;
+                haviBevetel += 100000;
+                lakossag += Convert.ToInt32(Math.Round(Convert.ToDouble(sizeTo.Text) / 30.0, 0));
             }
             if (cbEgészségügy?.IsChecked == true)
             {
-                penz -= 8000000; 
+                penz -= 8000000;
+                elegedettseg += 25;
+                haviBevetel += 100000;
             }
             if (cbOktatás?.IsChecked == true)
             {
                 penz -= 1500000; 
+                elegedettseg += 20;
             }
             if (cbGazdaság?.IsChecked == true)
             {
                 penz -= 5000000; 
+                elegedettseg += 22;
+                haviBevetel += 500000;
             }
             if (cbPénzügy?.IsChecked == true)
             {
                 penz -= 3000000; 
+                elegedettseg += 15;
+                haviBevetel += 300000;
             }
             if (cbSzórakoztatás?.IsChecked == true)
             {
                 penz -= 6000000;
+                elegedettseg += 25;
+                haviBevetel += 600000;
             }
             if (cbKereskedelem?.IsChecked == true)
             {
                 penz -= 3000000; 
+                elegedettseg += 16;
+                haviBevetel += 300000;
             }
             if (cbEpületKarb?.IsChecked == true)
             {
                 penz -= 80000; 
+                elegedettseg += 2;
             }
             if (listbox1?.SelectedItem != null)
             {
                 switch (listbox1.SelectedItem.ToString())
                 {
                     case "Egészségügy": 
-                        penz += 700000; 
+                        penz += 700000;
+                        elegedettseg -= 25;
+                        haviBevetel -= 100000;
                         break;
                     case "Oktatás": 
                         penz += 400000; 
+                        elegedettseg -= 20;
                         break;
                     case "Gazdaság": 
                         penz += 600000; 
+                        elegedettseg -= 22;
+                        haviBevetel -= 500000;
                         break;
                     case "Pénzügy": 
                         penz += 300000; 
+                        elegedettseg -= 15;
+                        haviBevetel -= 300000;
                         break;
                     case "Szórakoztatás": 
                         penz += 500000; 
+                        elegedettseg -= 25;
+                        haviBevetel -= 600000;
                         break;
                     case "Kereskedelem": 
-                        penz += 300000; 
+                        penz += 300000;
+                        elegedettseg -= 16;
+                        haviBevetel -= 300000;
                         break;
                 }
             }
+
+            if (listbox2?.SelectedItem != null)
+            {
+                switch (listbox2.SelectedItem.ToString())
+                {
+                    case "Egészségügy":
+                        penz -= 200000;
+                        elegedettseg += 6;
+                        break;
+                    case "Oktatás":
+                        penz -= 100000;
+                        elegedettseg += 3;
+                        break;
+                    case "Gazdaság":
+                        penz -= 150000;
+                        elegedettseg += 4;
+                        break;
+                    case "Pénzügy":
+                        penz -= 130000;
+                        elegedettseg += 3;
+                        break;
+                    case "Szórakoztatás":
+                        penz -= 170000;
+                        elegedettseg += 5;
+                        break;
+                    case "Kereskedelem":
+                        penz -= 110000;
+                        elegedettseg += 3;
+                        break;
+                }
+            }
+
             if (penz < 0)
             {
                 MessageBox.Show("Nincs elég pénzed!");
+                return;
             }
-            mainWindow.penzUpdate(penz);
+
+            if (elegedettseg < 1)
+            {
+                MessageBox.Show("A város nagyon elégedetlen lesz a változtatások után!");
+                return;
+            }
+
+            if (lakossag < 1)
+            {
+                MessageBox.Show("Elfogynak az emberek");
+                return;
+            }
+
+            if (elegedettseg > 100)
+            {
+                elegedettseg = 100;
+            }
+
+            if (haviBevetel < 0)
+            {
+                haviBevetel = 0;
+            }
+
+            mainWindow.PenzOsszeg = penz;
+            mainWindow.Elegedettseg = elegedettseg;
+            mainWindow.haviBevetel = haviBevetel;   
+            mainWindow.UpdateText();
             this.Close();
         }
 
@@ -127,7 +222,7 @@ namespace Állomváros
                 leiras1 = new Label { FontSize = 15, Foreground = Brushes.White };
                 listbox1.SelectionChanged += (o, e) =>
                 {
-                    if (listbox1.SelectedItem != null)
+                    if (listbox1?.SelectedItem != null)
                     {
                         switch (listbox1.SelectedItem.ToString())
                         {
@@ -158,7 +253,7 @@ namespace Állomváros
                                 break;
                             case "Kereskedelem":
                                 ContentPanel2.Children.Clear();
-                                leiras1.Content = "Havi költség: -300 000FT\nBefolyás az elégedettségen: -16%\nKöltségvetés: +300 000FT";
+                                leiras1.Content = "Havi bevétel: -300 000FT\nBefolyás az elégedettségen: -16%\nKöltségvetés: +300 000FT";
                                 ContentPanel2.Children.Add(leiras1);
                                 break;
                         }
@@ -172,19 +267,19 @@ namespace Állomváros
                 cbEpületTorles = new CheckBox { Content = "Épület", Margin = new Thickness(0,10,0,0), FontSize = 15, Foreground = Brushes.White, Background = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FE6584")) };
                 ContentPanel.Children.Add(cbEpületTorles);
 
-                TextBox size = new TextBox { Margin = new Thickness(0, 10, 0, 0), HorizontalAlignment = HorizontalAlignment.Center, Foreground = Brushes.Black, FontSize = 15, Width = 250 };
-                ContentPanel.Children.Add(size);
+                sizeTo = new TextBox { Margin = new Thickness(0, 10, 0, 0), HorizontalAlignment = HorizontalAlignment.Center, Foreground = Brushes.Black, FontSize = 15, Width = 250 };
+                ContentPanel.Children.Add(sizeTo);
                 Label meret = new Label { Foreground = Brushes.White, FontSize = 15 };
-                meret.Content = "Havi költésgvetés: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -0 fő";
+                meret.Content = "Havi bevétel: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -0 fő\nKöltségvetés: +100 000FT";
                 ContentPanel.Children.Add(meret);
-                size.TextChanged += (s, e) =>
+                sizeTo.TextChanged += (s, e) =>
                 {
-                    if (double.TryParse(size.Text, out double result))
+                    if (double.TryParse(sizeTo.Text, out double result))
                     {
                         if (result > 0 && result < 1000000)
                         {
                             int lak = Convert.ToInt32(Math.Round(result / 30.0, 0));
-                            meret.Content = $"\"Havi költésgvetés: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -{lak} fő";
+                            meret.Content = $"\"Havi bevétel: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -{lak} fő";
                         }
                         else
                         {
@@ -207,15 +302,15 @@ namespace Állomváros
                 cbLakóépület = new CheckBox { Content = "Lakóépület", FontSize = 15, Foreground = Brushes.White, Background = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FE6584")) };
                 ContentPanel2.Children.Add(cbLakóépület);
                 ContentPanel2.Children.Add(new Label { Content = "Méret", FontSize = 15, Foreground = Brushes.White });
-                TextBox size = new TextBox { HorizontalAlignment = HorizontalAlignment.Center, Foreground = Brushes.Black, FontSize = 15, Width = 250 };
-                ContentPanel2.Children.Add(size);
+                sizeEp = new TextBox { HorizontalAlignment = HorizontalAlignment.Center, Foreground = Brushes.Black, FontSize = 15, Width = 250 };
+                ContentPanel2.Children.Add(sizeEp);
                 ContentPanel2.Children.Add(new TextBlock { Text = "Költség: 8 000 000FT\nÉpítkezési idő: 6 hónap\nBefolyás az elégedettségen: + 20%\nHavi bevétel: 100 000FT", Foreground = Brushes.White, FontSize = 15, HorizontalAlignment = HorizontalAlignment.Center });
                 Label meret = new Label { FontSize = 15, Foreground = Brushes.White, Content = "Lakosságra való befolyás: + 0 fő" };
                 ContentPanel2.Children.Add(meret);
 
-                size.TextChanged += (s, e) =>
+                sizeEp.TextChanged += (s, e) =>
                 {
-                    if (double.TryParse(size.Text, out double result))
+                    if (double.TryParse(sizeEp.Text, out double result))
                     {
                         if (result > 0 && result < 1000000)
                         {
@@ -263,49 +358,51 @@ namespace Állomváros
 
             if (actionType == "karbantartas")
             {
-                ListBox items = new ListBox { ItemsSource = list, Foreground = Brushes.Black, FontSize = 15, Background = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FE6584")) };
-                ContentPanel.Children.Add(items);
-                Label leiras = new Label { FontSize = 15, Foreground = Brushes.White };
-                items.SelectionChanged += (o, e) =>
+                listbox2 = new ListBox { ItemsSource = list, Foreground = Brushes.Black, FontSize = 15, Background = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FE6584")) };
+                ContentPanel.Children.Add(listbox2);
+                leiras2 = new Label { FontSize = 15, Foreground = Brushes.White };
+                listbox2.SelectionChanged += (o, e) =>
                 {
-                    if (items.SelectedItem.ToString() != null)
+                    if (listbox2?.SelectedItem != null)
                     {
-                        switch (items.SelectedItem.ToString())
+                        switch (listbox2.SelectedItem.ToString())
                         {
                             case "Egészségügy":
                                 ContentPanel2.Children.Clear();
-                                leiras.Content = "Befolyás az elégedettségen: +6%\nKöltség: -200 000FT";
-                                ContentPanel2.Children.Add(leiras);
+                                leiras2.Content = "Befolyás az elégedettségen: +6%\nKöltség: -200 000FT";
+                                ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Oktatás":
                                 ContentPanel2.Children.Clear();
-                                leiras.Content = "Befolyás az elégedettségen: +3%\nKöltség: -100 000FT";
-                                ContentPanel2.Children.Add(leiras);
+                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -100 000FT";
+                                ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Gazdaság":
                                 ContentPanel2.Children.Clear();
-                                leiras.Content = "Befolyás az elégedettségen: +4%\nKöltség: -150 000FT";
-                                ContentPanel2.Children.Add(leiras);
+                                leiras2.Content = "Befolyás az elégedettségen: +4%\nKöltség: -150 000FT";
+                                ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Pénzügy":
                                 ContentPanel2.Children.Clear();
-                                leiras.Content = "Befolyás az elégedettségen: +3%\nKöltség: -130 000FT";
-                                ContentPanel2.Children.Add(leiras);
+                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -130 000FT";
+                                ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Szórakoztatás":
                                 ContentPanel2.Children.Clear();
-                                leiras.Content = "Befolyás az elégedettségen: +5%\nKöltség: -170 000FT";
-                                ContentPanel2.Children.Add(leiras);
+                                leiras2.Content = "Befolyás az elégedettségen: +5%\nKöltség: -170 000FT";
+                                ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Kereskedelem":
                                 ContentPanel2.Children.Clear();
-                                leiras.Content = "Befolyás az elégedettségen: +3%\nKöltség: -110 000FT";
-                                ContentPanel2.Children.Add(leiras);
+                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -110 000FT";
+                                ContentPanel2.Children.Add(leiras2);
                                 break;
                         }
                     }
                 };
-
+                Button torles = new Button { Content = "Kijelölés törlése", Style = (Style)FindResource("RoundedButtonStyle"), FontSize = 15 };
+                torles.Click += torles2_click;
+                ContentPanel.Children.Add(torles);
                 cbEpületKarb = new CheckBox { Content = "Épület", Margin = new Thickness(0,10,0,0), FontSize = 15, Foreground = Brushes.White, Background = new System.Windows.Media.SolidColorBrush((Color)ColorConverter.ConvertFromString("#FE6584")) };
                 ContentPanel.Children.Add(cbEpületKarb);
 
@@ -320,6 +417,12 @@ namespace Állomváros
             listbox1.SelectedIndex = -1;
             leiras1.Content = "";
         }
+        private void torles2_click(object sender, RoutedEventArgs e)
+        {
+            listbox2.SelectedIndex = -1;
+            leiras2.Content = "";
+        }
+        
         
     }
 }

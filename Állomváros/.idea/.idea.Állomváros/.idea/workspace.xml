@@ -8,32 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f471f160-9402-4b04-b0fa-fd882b676fa5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Állomváros/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Állomváros/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Állomváros.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/Reszlet.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/Reszlet.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/bin/Debug/net8.0-windows/Állomváros.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/bin/Debug/net8.0-windows/Állomváros.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/bin/Debug/net8.0-windows/Állomváros.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/bin/Debug/net8.0-windows/Állomváros.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/bin/Debug/net8.0-windows/Állomváros.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/bin/Debug/net8.0-windows/Állomváros.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Reszlet.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Reszlet.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/ref/Állomváros.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/ref/Állomváros.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/refint/Állomváros.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/refint/Állomváros.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Debug/net8.0-windows/Állomváros_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Állomváros.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Állomváros.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Állomváros/obj/Állomváros.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Állomváros/obj/Állomváros.csproj.nuget.g.props" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +36,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/db2f1c9a154b4026f7abb43f9a91839713d7ca8fd1268747f19843e1a117cf/Style.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -60,7 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.Állomváros.executor": "Run",
+    ".NET Project.Állomváros.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
@@ -104,6 +97,7 @@
       <workItem from="1733429263386" duration="31000" />
       <workItem from="1743007125334" duration="323000" />
       <workItem from="1743007462665" duration="5609000" />
+      <workItem from="1743098766995" duration="8632000" />
     </task>
     <servers />
   </component>
