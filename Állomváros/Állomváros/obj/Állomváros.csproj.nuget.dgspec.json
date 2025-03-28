@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HKris\\Documents\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj": {}
+    "C:\\Users\\HKris\\Desktop\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HKris\\Documents\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj": {
+    "C:\\Users\\HKris\\Desktop\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HKris\\Documents\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
+        "projectUniqueName": "C:\\Users\\HKris\\Desktop\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
         "projectName": "Állomváros",
-        "projectPath": "C:\\Users\\HKris\\Documents\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
+        "projectPath": "C:\\Users\\HKris\\Desktop\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\Állomváros.csproj",
         "packagesPath": "C:\\Users\\HKris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HKris\\Documents\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\obj\\",
+        "outputPath": "C:\\Users\\HKris\\Desktop\\V-ros-szimul-ci-\\Állomváros\\Állomváros\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

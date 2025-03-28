@@ -294,6 +294,7 @@
             </StackPanel>
 
             <TextBlock
+          x:Name="lakos"
           Text="Lakosság: 100 000"
           FontSize="40"
           Foreground="White"

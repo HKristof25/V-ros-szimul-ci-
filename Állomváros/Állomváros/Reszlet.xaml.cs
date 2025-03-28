@@ -45,28 +45,41 @@ namespace Állomváros
             int lakossag = mainWindow.Lakossag;
             int haviBevetel = mainWindow.haviBevetel;
             List<int> stack =  mainWindow.stack;
-            if (cbEpületTorles?.IsChecked == true)
+            int epuletminoseg = mainWindow.EpuletMinoseg;
+
+            try
             {
-                penz += 100000;
-                elegedettseg -= 20;
-                lakossag -= Convert.ToInt32(Math.Round(Convert.ToDouble(sizeTo.Text) / 30.0, 0));
-                
-                
+                if (cbEpületTorles?.IsChecked == true)
+                {
+                    penz += 100000;
+                    elegedettseg -= 20;
+                    
+                    haviBevetel -= 100000;
+                    lakossag -= Convert.ToInt32(Math.Round(Convert.ToDouble(sizeTo.Text) / 30.0, 0));
+
+
+                }
             }
-            if (cbEpület?.IsChecked == true)
+            catch(Exception ex) { MessageBox.Show("Helytelen adat!");return; }
+
+            try
             {
-                stack.Add(1000000);
-                stack.Add(10);
-                stack.Add(15);
-                haviBevetel += 200000;
+                if (cbEpület?.IsChecked == true)
+                {
+                    stack.Add(1000000);
+                    stack.Add(10);
+                    stack.Add(15);
+                    haviBevetel += 200000;
+                }
             }
-            if (cbLakóépület?.IsChecked == true)
+            catch(Exception ex) { MessageBox.Show("Helytelen adat!");return; }
+            if (cbLakóépület?.IsChecked == true  && sizeEp.Text != null)
             {
                 haviBevetel += 100000;
                 stack.Add(1300000);
                 stack.Add(6);
                 stack.Add(20);
-                lakossag += Convert.ToInt32(Math.Round(Convert.ToDouble(sizeTo.Text) / 30.0, 0));
+                lakossag += Convert.ToInt32(Math.Round(Convert.ToDouble(sizeEp.Text) / 30.0, 0));
             }
             if (cbEgészségügy?.IsChecked == true)
             {
@@ -116,6 +129,7 @@ namespace Állomváros
             {
                 penz -= 80000; 
                 elegedettseg += 2;
+                epuletminoseg += 15;
             }
             if (listbox1?.SelectedItem != null)
             {
@@ -160,26 +174,32 @@ namespace Állomváros
                     case "Egészségügy":
                         penz -= 200000;
                         elegedettseg += 6;
+                        epuletminoseg += 30;
                         break;
                     case "Oktatás":
                         penz -= 100000;
                         elegedettseg += 3;
+                        epuletminoseg += 20;
                         break;
                     case "Gazdaság":
                         penz -= 150000;
                         elegedettseg += 4;
+                        epuletminoseg += 25;
                         break;
                     case "Pénzügy":
                         penz -= 130000;
                         elegedettseg += 3;
+                        epuletminoseg += 22;
                         break;
                     case "Szórakoztatás":
                         penz -= 170000;
                         elegedettseg += 5;
+                        epuletminoseg += 27;
                         break;
                     case "Kereskedelem":
                         penz -= 110000;
                         elegedettseg += 3;
+                        epuletminoseg+= 21;
                         break;
                 }
             }
@@ -206,16 +226,17 @@ namespace Állomváros
             {
                 elegedettseg = 100;
             }
-
-            if (haviBevetel < 0)
+            if(epuletminoseg > 100)
             {
-                haviBevetel = 0;
+                epuletminoseg = 100;
             }
 
             mainWindow.PenzOsszeg = penz;
             mainWindow.Elegedettseg = elegedettseg;
             mainWindow.haviBevetel = haviBevetel;
             mainWindow.stack = stack;
+            mainWindow.Lakossag = lakossag;
+            mainWindow.EpuletMinoseg = epuletminoseg;
             mainWindow.UpdateText();
             this.Close();
         }
@@ -258,7 +279,7 @@ namespace Állomváros
                                 break;
                             case "Szórakoztatás":
                                 ContentPanel2.Children.Clear();
-                                leiras1.Content = "Havi bevétel: 600 000FT\nBefolyás az elégedettségen: -25%\nKöltségvetés: +500 000FT";
+                                leiras1.Content = "Havi bevétel: -600 000FT\nBefolyás az elégedettségen: -25%\nKöltségvetés: +500 000FT";
                                 ContentPanel2.Children.Add(leiras1);
                                 break;
                             case "Kereskedelem":
@@ -282,25 +303,28 @@ namespace Állomváros
                 Label meret = new Label { Foreground = Brushes.White, FontSize = 15 };
                 meret.Content = "Havi bevétel: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -0 fő\nKöltségvetés: +100 000FT";
                 ContentPanel.Children.Add(meret);
-                sizeTo.TextChanged += (s, e) =>
+                if (sizeTo.Text != null)
                 {
-                    if (double.TryParse(sizeTo.Text, out double result))
+                    sizeTo.TextChanged += (s, e) =>
                     {
-                        if (result > 0 && result < 1000000)
+                        if (double.TryParse(sizeTo.Text, out double result))
                         {
-                            int lak = Convert.ToInt32(Math.Round(result / 30.0, 0));
-                            meret.Content = $"\"Havi bevétel: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -{lak} fő";
+                            if (result > 0 && result < 1000000)
+                            {
+                                int lak = Convert.ToInt32(Math.Round(result / 30.0, 0));
+                                meret.Content = $"\"Havi bevétel: -100 000FT\nBefolyás az elégedettségen: -20%\nBefolyás a lakosségra: -{lak} fő";
+                            }
+                            else
+                            {
+                                meret.Content = "Helytelen adat!";
+                            }
                         }
                         else
                         {
                             meret.Content = "Helytelen adat!";
                         }
-                    }
-                    else
-                    {
-                        meret.Content = "Helytelen adat!";
-                    }
-                };
+                    };
+                }
             }
 
             if (actionType == "epulet")
@@ -379,32 +403,32 @@ namespace Állomváros
                         {
                             case "Egészségügy":
                                 ContentPanel2.Children.Clear();
-                                leiras2.Content = "Befolyás az elégedettségen: +6%\nKöltség: -200 000FT";
+                                leiras2.Content = "Befolyás az elégedettségen: +6%\nKöltség: -200 000FT\nÉpület minőség: +30";
                                 ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Oktatás":
                                 ContentPanel2.Children.Clear();
-                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -100 000FT";
+                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -100 000FT\nÉpület minőség: +20";
                                 ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Gazdaság":
                                 ContentPanel2.Children.Clear();
-                                leiras2.Content = "Befolyás az elégedettségen: +4%\nKöltség: -150 000FT";
+                                leiras2.Content = "Befolyás az elégedettségen: +4%\nKöltség: -150 000FT\nÉpület minőség: +25";
                                 ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Pénzügy":
                                 ContentPanel2.Children.Clear();
-                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -130 000FT";
+                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -130 000FT\nÉpület minőség: +22";
                                 ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Szórakoztatás":
                                 ContentPanel2.Children.Clear();
-                                leiras2.Content = "Befolyás az elégedettségen: +5%\nKöltség: -170 000FT";
+                                leiras2.Content = "Befolyás az elégedettségen: +5%\nKöltség: -170 000FT\nÉpület minőség: +27";
                                 ContentPanel2.Children.Add(leiras2);
                                 break;
                             case "Kereskedelem":
                                 ContentPanel2.Children.Clear();
-                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -110 000FT";
+                                leiras2.Content = "Befolyás az elégedettségen: +3%\nKöltség: -110 000FT\nÉpület minőség: +21";
                                 ContentPanel2.Children.Add(leiras2);
                                 break;
                         }
@@ -417,7 +441,7 @@ namespace Állomváros
                 ContentPanel.Children.Add(cbEpületKarb);
 
                 Label meret = new Label { Foreground = Brushes.White, FontSize = 15 };
-                meret.Content = "Befolyás az elégedettségen: +2%\nKöltség: 80 000FT";
+                meret.Content = "Befolyás az elégedettségen: +2%\nKöltség: 80 000FT\nÉpület minőség: +15";
                 ContentPanel.Children.Add(meret);
             }
         }

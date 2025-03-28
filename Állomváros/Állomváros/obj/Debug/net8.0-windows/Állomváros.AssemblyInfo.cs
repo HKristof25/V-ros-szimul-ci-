@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Állomváros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2cfce7742c93197952c53cebedc3e3cb986560e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22ec5730a43364435ece50e87fba54028eb565f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Állomváros")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Állomváros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

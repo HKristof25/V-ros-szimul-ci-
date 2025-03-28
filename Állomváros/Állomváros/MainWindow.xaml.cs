@@ -19,19 +19,27 @@ namespace Állomváros
         public int PenzOsszeg;
         public int haviBevetel;
         public int Elegedettseg;
-        public int Lakossag = 100;
-        int EpuletMinoseg;
+        public int Lakossag;
+        int MinElegedettseg;
+        int SzimHossz;
+        public int EpuletMinoseg;
         int Honap;
         public List<int> stack = new List<int>();
         Random r = new Random();
-        public MainWindow()
+        public MainWindow(int PenzInput, int KezdoEInput, int EpuletInput, int MinEInput, int HonapInput)
         {
             InitializeComponent();
-            PenzOsszeg = 10000000;
-            Elegedettseg = 80;
-            EpuletMinoseg = 100;
+            PenzOsszeg = PenzInput;
+            Elegedettseg = KezdoEInput;
+            EpuletMinoseg = EpuletInput;
+            MinElegedettseg = MinEInput;
+            SzimHossz = HonapInput;
+            Lakossag = 50000;
             haviBevetel = -100000;
             Honap = 1;
+
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Close();
             UpdateText();
    
         }
@@ -71,40 +79,42 @@ namespace Állomváros
                 }
             }
             
-            int esemeny = r.Next(0, 20);
-            if (esemeny < 100)
+            int esemeny = r.Next(0, 100);
+            if (esemeny < 20)
             {
                 MessageBox.Show("Semmi nem történt ebben a hónapba.");
             }
             else if (esemeny < 50)
             {
                 MessageBox.Show("Kigyuladt egylakóparj!");
-                Elegedettseg -= 5;
-                PenzOsszeg -= 500000;
+                Elegedettseg -= 1;
+                PenzOsszeg -= 50000;
             }
             else if (esemeny < 70)
             {
                 MessageBox.Show("Hatalmas viharok súlytották a város!");
-                Elegedettseg -= 6;
-                PenzOsszeg -= 500000;
+                Elegedettseg -= 1;
+                PenzOsszeg -= 50000;
             }
             else if (esemeny < 90)
             {
                 MessageBox.Show("Földrengés súlytotta a város!");
-                Elegedettseg -= 8;
-                PenzOsszeg -= 500000;
+                Elegedettseg -= 1;
+                PenzOsszeg -= 50000;
             }
             else
             {
-                MessageBox.Show("Az alkhaida terror támadást mért a városra! Bomboclat");
-                Elegedettseg -= 12;
-                PenzOsszeg -= 1000000;
+                MessageBox.Show("Tsunami súlytotta a várost");
+                Elegedettseg -= 1;
+                PenzOsszeg -= 80000;
             }
+
             Honap += 1;
-            if (Elegedettseg - 5 <= 0)
+            if (Elegedettseg - 5 <= 0 || Honap == SzimHossz || PenzOsszeg < 0)
             {
                 Elegedettseg = 0;
-                MessageBox.Show("Vesztettél");
+                PenzOsszeg = 0;
+                MessageBox.Show("A Játéknak vége");
                 NextMonth.IsEnabled = false;
             }
 
@@ -122,6 +132,7 @@ namespace Állomváros
             elegedettseg.Text = $"Elégedettség: {Elegedettseg} %";
             minoseg.Text = $"Épület minőség: {EpuletMinoseg} %";
             honap.Text = $"{Honap}. Hónap";
+            lakos.Text = $"Lakosság: {Lakossag}";
             if(haviBevetel > 0)
                 kiadástext.Text = $"Havi bevétel: {haviBevetel} Ft";
             else
