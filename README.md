@@ -19,7 +19,6 @@ A program egy főmenüvel indul, ahol meg vannak adva néhány alap kezdőérté
 - Kezdő elégedettség
 - Minimális elégedettség
 - Épületek állapota
-- Lakosság
 
 A **"Szimuláció kezdése"** gombbal lehet elindítani a szimulációt.
 
@@ -29,6 +28,8 @@ Minden projektlehetőség kiválasztásakor egy új ablak nyílik meg, ahol:
 
 - Ki lehet választani a projekt részleteit.
 - Megjelennek a költségek, a bevételre gyakorolt hatás, az építési idő (ha van), és az elégedettség változása.
+  
+Vannak alapértelmezett adatok is, mint például a lakosság vagy a kezdő havi kiadás.
 
 Az **"OK"** gomb megnyomásával a kiválasztott projektek eltárolódnak (ha vannak), és visszakerülsz a **Szimuláció** ablakba.  
 
