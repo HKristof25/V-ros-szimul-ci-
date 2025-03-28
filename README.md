@@ -15,12 +15,13 @@ Ezután nyisd meg a `Álomváros\Solution` fájlt, és futtasd az alkalmazást.
 ### 1. Főmenü
 A program egy főmenüvel indul, ahol meg vannak adva néhány alap kezdőérték, de ezeket módosítani is lehet:
 
+- Szimuláció hossza
 - Kezdő pénz
 - Kezdő elégedettség
 - Minimális elégedettség
 - Épületek állapota
 
-A **"Szimuláció kezdése"** gombbal lehet elindítani a szimulációt.
+A **Szimuláció kezdése** gombbal lehet elindítani a szimulációt.
 
 ## 2. Szimuláció     
 A szimulációs ablak jobb oldalán megjelennek a város adatai, bal oldalon pedig a projektlehetőségek és a pénz.  
@@ -31,14 +32,15 @@ Minden projektlehetőség kiválasztásakor egy új ablak nyílik meg, ahol:
   
 Vannak alapértelmezett adatok is, mint például a lakosság vagy a kezdő havi kiadás.
 
-Az **"OK"** gomb megnyomásával a kiválasztott projektek eltárolódnak (ha vannak), és visszakerülsz a **Szimuláció** ablakba.  
+Az **OK** gomb megnyomásával a kiválasztott projektek eltárolódnak (ha vannak), és visszakerülsz a **Szimuláció** ablakba.  
 
 - Új projekteket lehet indítani.  
-- A **"Következő hónap"** gombbal egy hónapot lépünk előre, és a projektek költségei hónapokra osztva levonódnak a város pénzéből.  
+- A **Következő hónap** gombbal egy hónapot lépünk előre, és a projektek költségei hónapokra osztva levonódnak a város pénzéből.  
 - Ha lejár az építési idő, az elégedettség módosul.  
 - Az épületek minősége minden hónapban romlik, valamint a pénz és az elégedettség automatikusan csökken.
 
 ## 3. Vége
 A szimuláció akkor ér véget, ha:  
-- A város pénze elfogy, **vagy**  
+- A város pénze elfogy,  
 - Az elégedettség a minimum alá esik.
+- A szimuláció ideje lejár
