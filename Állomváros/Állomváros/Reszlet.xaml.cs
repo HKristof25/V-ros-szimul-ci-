@@ -21,8 +21,6 @@ namespace Állomváros
         private ListBox listbox2;
         private Label leiras1, leiras2;
         private MainWindow mainWindow;
-        
-
         private CheckBox cbEpületTorles, cbEpület, cbLakóépület, cbEgészségügy, cbOktatás, cbGazdaság, cbPénzügy, cbSzórakoztatás, cbKereskedelem, cbEpületKarb;
         private TextBox sizeEp, sizeTo;
 
@@ -46,7 +44,7 @@ namespace Állomváros
             int elegedettseg = mainWindow.Elegedettseg;
             int lakossag = mainWindow.Lakossag;
             int haviBevetel = mainWindow.haviBevetel;
-            
+            List<int> stack =  mainWindow.stack;
             if (cbEpületTorles?.IsChecked == true)
             {
                 penz += 100000;
@@ -57,51 +55,62 @@ namespace Állomváros
             }
             if (cbEpület?.IsChecked == true)
             {
-                penz -= 10000000;
-                elegedettseg += 15;
+                stack.Add(1000000);
+                stack.Add(10);
+                stack.Add(15);
                 haviBevetel += 200000;
             }
             if (cbLakóépület?.IsChecked == true)
             {
-                penz -= 8000000;
-                elegedettseg += 20;
                 haviBevetel += 100000;
+                stack.Add(1300000);
+                stack.Add(6);
+                stack.Add(20);
                 lakossag += Convert.ToInt32(Math.Round(Convert.ToDouble(sizeTo.Text) / 30.0, 0));
             }
             if (cbEgészségügy?.IsChecked == true)
             {
-                penz -= 8000000;
-                elegedettseg += 25;
                 haviBevetel += 100000;
+                stack.Add(800000);
+                stack.Add(10);
+                stack.Add(25);
             }
             if (cbOktatás?.IsChecked == true)
             {
-                penz -= 1500000; 
-                elegedettseg += 20;
+                stack.Add(100000);
+                stack.Add(15);
+                stack.Add(20);
             }
             if (cbGazdaság?.IsChecked == true)
             {
-                penz -= 5000000; 
-                elegedettseg += 22;
                 haviBevetel += 500000;
+                stack.Add(1000000);
+                stack.Add(5);
+                stack.Add(22);
             }
             if (cbPénzügy?.IsChecked == true)
             {
-                penz -= 3000000; 
-                elegedettseg += 15;
                 haviBevetel += 300000;
+                stack.Add(750000);
+                stack.Add(4);
+                stack.Add(15);
             }
             if (cbSzórakoztatás?.IsChecked == true)
             {
-                penz -= 6000000;
-                elegedettseg += 25;
                 haviBevetel += 600000;
+
+                stack.Add(1000000);
+                stack.Add(6);
+                stack.Add(25);
             }
             if (cbKereskedelem?.IsChecked == true)
             {
-                penz -= 3000000; 
-                elegedettseg += 16;
+  
                 haviBevetel += 300000;
+
+                stack.Add(375000);
+                stack.Add(8);
+                stack.Add(16);
             }
             if (cbEpületKarb?.IsChecked == true)
             {
@@ -205,7 +214,8 @@ namespace Állomváros
 
             mainWindow.PenzOsszeg = penz;
             mainWindow.Elegedettseg = elegedettseg;
-            mainWindow.haviBevetel = haviBevetel;   
+            mainWindow.haviBevetel = haviBevetel;
+            mainWindow.stack = stack;
             mainWindow.UpdateText();
             this.Close();
         }
